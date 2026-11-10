@@ -33,7 +33,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/">
             <div className="logo">
-              <img src="../public/AtsFlix.png" alt="Atsflix-logo" />
+              <img src="public/AtsFlix.png" alt="Atsflix-logo" />
             </div>
           </Link>
 
