@@ -36,6 +36,13 @@ const ExploreBy = () => {
     (item) => item.path === `/discover/${type}/${category}/${value}`,
   );
 
+  const highlightedCategoryName: string =
+    category === "languages" &&
+    "original_lang" in categoryFind &&
+    typeof categoryFind.original_lang === "string"
+      ? categoryFind.original_lang
+      : categoryFind.name;
+
   // These custom hooks run unconditionally; invalid routes simply disable fetching.
   const tilesData = useExploreTiles(type ?? "", category ?? "", value ?? "");
   const query = useExploreMovies(
@@ -73,9 +80,7 @@ const ExploreBy = () => {
         <div className="content-wrapper">
           <h1 className="text-center">
             Explore Our{" "}
-            <span className="text-[#e50914]/90">
-              {categoryFind.name}
-            </span>{" "}
+            <span className="text-[#e50914]/90">{highlightedCategoryName}</span>{" "}
             {type} Collections
           </h1>
           <p className="text-center w-full">{categoryFind.description}</p>
