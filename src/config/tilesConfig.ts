@@ -101,7 +101,7 @@ export const exploreLanguageTiles = [
     title: "Kannada",
     description:
       "Watch and download Kannada movies and TV shows online for free on our website.",
-    category: "kannada-ka",
+    category: "kannada-kn",
     path: "/discover/movies/genres/kannada-ka",
     hideFor: ["genres"],
   },
